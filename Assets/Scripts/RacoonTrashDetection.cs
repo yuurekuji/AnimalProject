@@ -1,16 +1,25 @@
+using NodeCanvas.Framework;
 using UnityEngine;
 
 public class RacoonTrashDetection : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Blackboard blackboard;
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.tag == "Trash")
+        {
+            blackboard.SetVariableValue("TrashIsNear", true);
+            blackboard.SetVariableValue("TrashTransform", other.transform);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        if (other.gameObject.tag == "Trash")
+        {
+            blackboard.SetVariableValue("TrashIsNear", false);
+            blackboard.SetVariableValue("TrashTransform", null);
+        }
     }
 }

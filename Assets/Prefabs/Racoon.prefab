@@ -1258,7 +1258,7 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"playerIsDetected":{"_name":"playerIsDetected","_id":"358b6fb5-2170-403d-9bfc-f926c3ee017f","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"playerIsTooClose":{"_name":"playerIsTooClose","_id":"ca975aa6-239f-4a18-a747-4c15a3e348c1","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"playerDistance":{"_name":"playerDistance","_id":"88582889-5fd1-4b91-90bf-7beb426e74d5","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TrasIsNear":{"_name":"TrasIsNear","_id":"ee010ec5-7a46-4591-a7ef-4cea61e67662","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TrashIsNear":{"_name":"TrashIsNear","_id":"ee010ec5-7a46-4591-a7ef-4cea61e67662","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TrashTransform":{"_name":"TrashTransform","_id":"fa41737c-094d-41dc-9b30-bfa310b60d76","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"TargetPos":{"_name":"TargetPos","_id":"80b84198-1121-4a72-a83d-c49e7553b8e6","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"FearLVL":{"_name":"FearLVL","_id":"3c0fd105-2156-4824-9e1f-bbe321202f27","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   - _json: '{"_name":"playerDistance","_id":"88582889-5fd1-4b91-90bf-7beb426e74d5","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_name":"TrasIsNear","_id":"ee010ec5-7a46-4591-a7ef-4cea61e67662","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+  - _json: '{"_name":"TrashIsNear","_id":"ee010ec5-7a46-4591-a7ef-4cea61e67662","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_name":"TrashTransform","_id":"fa41737c-094d-41dc-9b30-bfa310b60d76","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084aee3f0f657f44bb7e3100cdb8f38d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackboard: {fileID: 0}
+  blackboard: {fileID: 8410996480091111355}
   player: {fileID: 0}
   detectRadius: 12
   panicRadius: 6
@@ -1373,6 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205d42f130b22694495a34e7cf6bf950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackboard: {fileID: 8410996480091111355}
 --- !u!1 &8490612162250769556
 GameObject:
   m_ObjectHideFlags: 0
