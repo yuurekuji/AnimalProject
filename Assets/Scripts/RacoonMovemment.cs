@@ -18,18 +18,16 @@ public class RacoonMovemment : MonoBehaviour
 
         if (target != Vector3.zero)
         {
+            agent.isStopped = false;
             agent.SetDestination(target);
         }
-    }
 
-    public void SetSpeed(float speed)
-    {
-        agent.speed = speed;
-    }
+        // SIMPLE ARRIVAL CHECK (brute force)
+        float dist = Vector3.Distance(transform.position, target);
 
-    public bool ReachedDestination()
-    {
-        if (agent.pathPending) return false;
-        return agent.remainingDistance <= agent.stoppingDistance + 0.2f;
+        if (dist < 1.5f)
+            blackboard.SetVariableValue("Arrived", true);
+        else
+            blackboard.SetVariableValue("Arrived", false);
     }
 }

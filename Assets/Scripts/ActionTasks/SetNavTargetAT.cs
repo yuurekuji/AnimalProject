@@ -1,22 +1,22 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using TMPro;
 using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class SetNavTargetAT : ActionTask {
+    public class SetNavTargetAT : ActionTask {
 
+        public BBParameter<Vector3> TargetPos;
         public float radius = 10f;
 
         protected override void OnExecute()
         {
             Vector3 offset = Random.insideUnitSphere * radius;
-            offset.y = 0;
+            offset.y = 0f;
 
-            Vector3 target = agent.transform.position + offset;
-            blackboard.SetVariableValue("TargetPos", target);
-
+            TargetPos.value = agent.transform.position + offset;
             EndAction(true);
         }
     }

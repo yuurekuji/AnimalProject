@@ -11,8 +11,8 @@ namespace NodeCanvas.Tasks.Actions {
 
         protected override void OnExecute()
         {
-            var agentNav = agent.GetComponent<NavMeshAgent>();
-            agentNav.speed = speed;
+            float agentNav = agent.GetComponent<NavMeshAgent>().speed;
+            agentNav = speed;
             EndAction(true);
         }
     }
