@@ -4,19 +4,18 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-namespace NodeCanvas.Tasks.Actions
-{
+namespace NodeCanvas.Tasks.Actions {
 
-    public class IdleAT : ActionTask
-    {
+	public class EatingAT : ActionTask {
+
         public float minIdleTime = 2f;
         public float maxIdleTime = 4f;
 
         private float timer;
-        private float idleDuration;
+        private float EatingDuration;
         private NavMeshAgent nav;
 
-        public BBParameter<bool> idleDone;
+        public BBParameter<bool> EatingDone;
         protected override void OnExecute()
         {
             nav = agent.GetComponent<NavMeshAgent>();
@@ -27,9 +26,9 @@ namespace NodeCanvas.Tasks.Actions
                 nav.velocity = Vector3.zero;
             }
 
-            idleDone.value = false;
+            EatingDone.value = false;
 
-            idleDuration = Random.Range(minIdleTime, maxIdleTime);
+            EatingDuration = Random.Range(minIdleTime, maxIdleTime);
             timer = 0f;
         }
 
@@ -37,17 +36,13 @@ namespace NodeCanvas.Tasks.Actions
         {
             timer += Time.deltaTime;
 
-            if (timer >= idleDuration)
+            if (timer >= EatingDuration)
             {
-                idleDone.value = true;
+                EatingDone.value = true;
 
                 EndAction(true);
-                Debug.Log("IdleIsDone");
+                Debug.Log("EatingIsDone");
             }
-        }
-        protected override void OnStop()
-        {
-            if (nav != null) nav.isStopped = false;
         }
     }
 }
